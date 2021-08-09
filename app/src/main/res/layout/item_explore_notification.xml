@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rlTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile"
+            app:civ_circle_background_color="@color/gray_border" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toStartOf="@id/rlImage"
+            android:layout_toEndOf="@id/imgProfilePic"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="mr_m"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/imgProfilePic"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center_vertical"
+            android:text="Rohit"
+            android:visibility="gone"
+            android:maxLines="1"
+            android:layout_toStartOf="@id/rlImage"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvComment"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_toEndOf="@id/imgProfilePic"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center_vertical"
+            android:text="49 sec"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_3sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:rotation="90"
+            android:src="@drawable/ic_feed_post_more" />
+
+        <RelativeLayout
+            android:id="@+id/rlImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_toStartOf="@id/imgMenu">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgAddConnection"
+                android:padding="@dimen/_5sdp"
+                app:tint="@color/green_text_color"
+                android:src="@drawable/ic_explore_connection"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgPost"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/smallRoundedCornersImageView"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        </RelativeLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/bg_chat"
+           android:layout_below="@id/rlTop"/>
+    </RelativeLayout>
+</layout>

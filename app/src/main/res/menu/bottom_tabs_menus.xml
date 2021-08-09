@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:id="@+id/tab_chat"
+        android:icon="@drawable/item_tab_chat"
+        android:title="@string/app_name"
+        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/tab_timeline"
+        android:icon="@drawable/item_timeline"
+        android:title="@string/app_name"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/tab_activities"
+        android:title="@string/app_name"
+        android:icon="@drawable/item_tab_activity"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/tab_feed"
+        android:icon="@drawable/item_tab_feed"
+        android:title="@string/app_name"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/tab_flick"
+        android:icon="@drawable/item_tab_flicks"
+        android:title="@string/app_name"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/tab_profile"
+        android:title="@string/app_name"
+        android:icon="@drawable/item_tab_profile"
+        app:showAsAction="always" />
+
+</menu>

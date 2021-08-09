@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="item"
+            type="com.app.spark.models.GetCommentsResponse.Result.ChildComment" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/_5sdp"
+    android:id="@+id/clComment"
+    >
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:background="@color/dark_gray_text_color"
+       app:layout_constraintBottom_toBottomOf="parent"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfilePic"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:imageUrl="@{item.profilePic}"
+        app:placeholder="@{@drawable/ic_profile}"
+        android:src="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesansprosegular"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toStartOf="@id/imgLike"
+        app:layout_constraintTop_toTopOf="@id/imgProfilePic"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:text="@{item.comment}"
+        app:userName="@{item.username}"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@id/imgProfilePic"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_8sdp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgProfilePic"
+        android:id="@+id/imgLike"
+        android:src="@drawable/selector_favourite"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfilePic"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentBarrier"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvComment,imgProfilePic"/>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesansprosegular"
+        android:textSize="@dimen/_10ssp"
+        app:commentTime="@{item.createdOn}"
+        app:layout_constraintStart_toStartOf="@id/tvComment"
+        android:textColor="@color/gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/commentBarrier"
+       />
+
+    <TextView
+        android:id="@+id/tvTotalLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesansprosegular"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="49 Sparkks"
+        android:layout_marginBottom="@dimen/_3sdp"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        android:textColor="@color/gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/commentBarrier"
+        />
+
+    <TextView
+        android:id="@+id/tvReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesansprosegular"
+        android:textSize="@dimen/_10ssp"
+        android:text="@string/reply"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="@id/tvComment"
+        android:textColor="@color/gray_text_color"
+        app:layout_constraintTop_toBottomOf="@id/commentBarrier"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

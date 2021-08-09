@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_card"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_16sdp"
+        android:padding="@dimen/_16sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/are_you_sure_you_clear_messages"
+            android:gravity="center_vertical"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_16ssp" />
+
+        <LinearLayout
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cbDeleteMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprolight"
+                android:paddingStart="@dimen/_16sdp"
+                android:text="@string/delete_media_in_chat"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+
+            <CheckBox
+                android:id="@+id/cbDeleteStarMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprolight"
+                android:paddingStart="@dimen/_16sdp"
+                android:text="@string/delete_star_messages"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_gray_text_color"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/bg_chat_cancel"
+                />
+            <TextView
+                android:id="@+id/tvOk"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/clear"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/bg_chat_delete_green"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+</layout>

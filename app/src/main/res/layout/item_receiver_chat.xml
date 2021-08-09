@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="08:23pm"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvSenderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="Ravi"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSenderName"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/bg_receiver_chat"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="How's you?"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSenderName"
+                app:layout_constraintWidth_percent="0.6" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgMedia"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:visibility="gone"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSenderName"
+                app:layout_constraintWidth_percent="0.3"
+                app:shapeAppearanceOverlay="@style/roundedCornersImageView" />
+
+            <ImageView
+                android:id="@+id/imgAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_play_circle_filled_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSenderName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="clMessage" />
+
+        <androidx.constraintlayout.widget.Group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/messageGroup"
+            app:constraint_referenced_ids="barrier,clMessage,txtMessageTime"/>
+
+        <TextView
+            android:id="@+id/tvAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chat_date"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="July 6, 2020"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAllCaps="true"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12ssp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_170sdp"
+            android:orientation="vertical"
+            android:background="@drawable/ic_bg_dialog_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:gravity="center"
+                android:ems="20"
+                android:padding="@dimen/_10sdp"
+                android:text="Connection type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+            <LinearLayout
+                android:id="@+id/llPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <View
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@color/black_new"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Personal"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llProfessional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_5sdp">
+                <View
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Professional"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llPublic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_5sdp">
+                <View
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@color/black_new"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Public / Play"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

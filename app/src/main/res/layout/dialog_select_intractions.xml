@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Who Can Message"
+        android:textSize="18sp"
+        android:fontFamily="@font/sourcesansprobold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/colorBlack"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            >
+
+            <RadioGroup
+                android:id="@+id/radios"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="right"
+                android:inputType="text"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/first"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:drawablePadding="30dp"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="Everyone"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dip" />
+
+                <RadioButton
+                    android:id="@+id/second"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawablePadding="30dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="Your Followers"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+
+                <RadioButton
+                    android:id="@+id/third"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawablePadding="30dp"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="people You Follow"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" />
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

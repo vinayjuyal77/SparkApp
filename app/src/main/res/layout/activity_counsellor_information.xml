@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity"
+            type="com.app.spark.activity.counsellor.CounsellorInformationActivity" />
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/backgroundColorApp"
+            >
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize"
+                android:background="@color/backgroundColorBottomBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_backspace_24"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:onClick="@{(view) -> activity.onBackPressed()}"
+                    />
+                <TextView
+                    android:id="@+id/tvToolbarName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sourcesansprobold"
+                    android:gravity="center"
+                    android:text="@string/get_ready_to_be_relieved"
+                    android:singleLine="true"
+                    android:textColor="@color/yellow_FFA602"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUser"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:src="@drawable/dummy_image"
+                app:civ_border_color="@color/green_text_color"
+                app:civ_border_width="@dimen/_3sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_160sdp"
+                android:layout_marginLeft="@dimen/_25sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:background="@drawable/bg_white_card"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@+id/cvStartCall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/civUser">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/counsellor_information"
+                    android:textColor="@color/green_text_color"
+                    android:textSize="@dimen/_14sdp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/name"
+                    android:textColor="@color/dialog_gray_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="Vinay Juyal"
+                    android:textColor="@color/gray_aeaeae" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/gender"
+                    android:textColor="@color/dialog_gray_background" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="Male"
+                    android:textColor="@color/gray_aeaeae" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/about"
+                    android:textColor="@color/dialog_gray_background" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:text="@string/_15_00_min_clock_is_up_you_guys_didn_t_shared_your_accounts_or_revealed_your_identity_so_its_time_to_find_someone_new"
+                    android:textColor="@color/gray_aeaeae" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvStartCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_50sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_call"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:background="@color/yellow_FFA602"
+                    android:ems="7" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

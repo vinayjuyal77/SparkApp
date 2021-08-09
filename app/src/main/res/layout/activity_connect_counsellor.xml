@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.app.spark.activity.counsellor.ConnectCounsellorActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.app.spark.viewmodel.ConnectCounsellorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorApp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:background="@color/backgroundColorBottomBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{(view) -> activity.onBackPressed()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_backspace_24" />
+
+            <TextView
+                android:id="@+id/tvToolbarName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/sourcesansprobold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/connect_a_counsellor"
+                android:textColor="@color/yellow_FFA602"
+                android:textSize="@dimen/_18sdp" />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/preferred_name"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_edit_text"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="@={viewModel.request.preferredName}"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/your_age"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_edit_text"
+                    android:drawableRight="@drawable/ic_path_drop_down"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:hint="Select your age"
+                    android:textColorHint="@color/black_new"
+                    android:textColor="@color/colorBlack"
+                    android:text="@{viewModel.updateFlied.ageStatus}"
+                    android:onClick="@{(v) -> viewModel.onYourAgeSelect(v)}"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/your_issue"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_edit_text"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@null"
+                        android:fontFamily="@font/sourcesansprosegular"
+                        android:gravity="start"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@={viewModel.request.yourIssue}"
+                        android:onTextChanged="@{viewModel.onTextChanged}"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <TextView
+                        android:id="@+id/tvRemainingChar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="@{String.valueOf(viewModel.updateFlied.charStatus)}"
+                        android:fontFamily="@font/sourcesansprosemibold"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_aeaeae" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/relationship_status"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/round_edit_text">
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/spinner_bg"
+                        android:spinnerMode="dropdown"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/current_mood"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTaglist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTags" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:singleLine="true"
+                    android:text="@string/current_situation"
+                    android:textColor="@color/gray_aeaeae"
+                    android:textSize="@dimen/_14sdp" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTagSituation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTags" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvProceed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:onClick="@{viewModel::onProceed}"
+                    app:cardCornerRadius="@dimen/_50sdp"
+                    app:cardElevation="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/yellow_FFA602"
+                        android:ems="7"
+                        android:fontFamily="@font/sourcesansprosemibold"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:text="@string/proceed"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

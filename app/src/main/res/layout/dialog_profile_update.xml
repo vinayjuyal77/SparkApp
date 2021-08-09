@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:layout_margin="@dimen/_25sdp"
+        android:background="@drawable/bg_white_card"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprobold"
+            android:text="Update Your Profile"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="To get a better Performance Please Update Your Profile. "
+            />
+
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignTop="@id/tvCancel"
+            android:layout_alignEnd="@id/tvTitle"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@drawable/bg_button"
+            />
+    </LinearLayout>
+</LinearLayout>

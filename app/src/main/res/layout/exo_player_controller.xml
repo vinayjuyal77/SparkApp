@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layoutDirection="ltr"
+    android:background="@color/black_translucent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton android:id="@id/exo_play"
+            style="@style/ExoMediaButton.Play"/>
+        <ImageButton android:id="@id/exo_pause"
+            style="@style/ExoMediaButton.Pause"/>
+        <View android:id="@id/exo_progress_placeholder"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="26dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>
+

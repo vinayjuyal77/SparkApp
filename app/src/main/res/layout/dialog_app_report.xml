@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_white_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Viny Juyal"
+                android:ems="25"
+                android:textColor="@color/black_new"
+                android:textSize="@dimen/_16sdp" />
+            <TextView
+                android:id="@+id/tvdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:textSize="@dimen/_14sdp"
+                android:padding="@dimen/_10sdp"
+
+                android:text="Requesting to join as speaker"
+                android:textColor="@color/black_new"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp">
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:ems="5"
+                    android:text="Dissmis"
+                    android:background="@drawable/bg_button_white"
+                    android:textColor="@color/green_txt_color"
+                    android:layout_marginRight="@dimen/_5sdp"/>
+                <TextView
+                    android:id="@+id/tvDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:padding="@dimen/_8sdp"
+                    android:text="Allow"
+                    android:ems="5"
+                    android:background="@drawable/ic_bg_button_green"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/_5sdp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

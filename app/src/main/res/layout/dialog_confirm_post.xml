@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:layout_margin="@dimen/_16sdp"
+        android:background="@drawable/round_edit_text"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_new"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/confirm_posting_selected_post_type" />
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:text="@string/cancel"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_gray_text_color"
+            android:layout_below="@id/tvTitle"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@drawable/bg_button_light_gray"
+            />
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:text="@string/post"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_alignTop="@id/tvCancel"
+            android:layout_alignEnd="@id/tvTitle"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@drawable/ic_bg_button_green"
+            />
+    </RelativeLayout>
+</LinearLayout>

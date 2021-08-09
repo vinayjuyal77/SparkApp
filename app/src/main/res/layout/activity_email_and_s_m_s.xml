@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.app.spark.activity.setting.security.AuthenticationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_theme"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_black"
+                    android:layout_marginStart="20dp"
+                    app:tint="@color/white" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesansprobold"
+                    android:text="Email &amp; SMS"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Feedback Email"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="On"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray_border" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Reminder Emails"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="On"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray_border" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Product Emails"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="On"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray_border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="News Emails"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:text="On"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@color/gray_border" />
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

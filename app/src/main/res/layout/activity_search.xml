@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="search"
+        type="com.app.spark.activity.search.SearchActivity" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorApp">
+
+        <View
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/backgroundColorApp"/>
+
+        <ImageView
+            android:onClick="@{(view) -> search.onBackPressed()}"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back_black"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/bg_profile_black"
+            app:layout_constraintTop_toTopOf="@id/viewHeader"
+            app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:id="@+id/llEditSearch"
+            app:layout_constraintTop_toTopOf="@id/viewHeader"
+            app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+            app:layout_constraintStart_toEndOf="@+id/tvBack"
+            app:layout_constraintWidth_percent="0.9"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/searcc_bg"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_height="@dimen/_32sdp">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_weight=".80"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:elevation="@dimen/_1sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:paddingStart="@dimen/_8sdp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/_14ssp"
+                />
+            <ImageView
+                android:onClick="@{(view) -> search.clearSearch()}"
+                android:id="@+id/imgCancel"
+                android:visibility="gone"
+                android:src="@drawable/ic_cancel_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNamaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/namaste"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader" />
+
+        <TextView
+            android:id="@+id/tvWeWelcomeYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center"
+            android:text="@string/we_welcome_you_to_social_lifestyle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaste" />
+
+        <TextView
+            android:id="@+id/tvFollowPeoplePages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center"
+            android:text="@string/follow_people_pages"
+            android:textColor="@color/white"
+            app:layout_constraintWidth_percent="0.8"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWeWelcomeYou" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llEditSearch"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            tools:listitem="@layout/item_serach_list"
+            tools:itemCount="5"
+            android:id="@+id/rvSearchData"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

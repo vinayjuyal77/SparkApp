@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/rlSwipeView"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_bg_edit_profile"
+                app:civ_circle_background_color="@color/gray_border" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toStartOf="@id/tvTime"
+                android:layout_toEndOf="@id/imgProfilePic"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center_vertical"
+              android:background="@color/gray_border"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserName"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toStartOf="@id/tvTime"
+                android:layout_toEndOf="@id/imgProfilePic"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center_vertical"
+              android:background="@color/gray_border"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_2sdp"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSwipeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/rlCard"
+            android:layout_alignBottom="@id/rlCard"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorThemeRed"
+          android:paddingHorizontal="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_comment_delete"
+                android:padding="@dimen/_5sdp" />
+
+            <ImageView
+                android:id="@+id/imgPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/ic_chat_pin"
+                android:layout_toEndOf="@+id/imgDelete"
+                android:padding="@dimen/_5sdp" />
+
+            <ImageView
+                android:id="@+id/imgMute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/imgPin"
+                android:src="@drawable/ic_chat_mute"
+                android:padding="@dimen/_5sdp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

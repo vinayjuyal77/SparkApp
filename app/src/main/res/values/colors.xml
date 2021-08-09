@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_new">#000111</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="gray_border">#DBDBDB</color>
+    <color name="feed_gray_border">#F6F6F6</color>
+    <color name="feed_gray_border1">#ECECEC</color>
+    <color name="text_hint">#AAAAAA</color>
+    <color name="light_gray_text_color">#A6A9ABCC</color>
+    <color name="explore_text_color">#808080</color>
+    <color name="gray_text_color">#A6A9AB</color>
+    <color name="dark_gray_text_color">#444444</color>
+    <color name="green_text_color">#09C988</color>
+    <color name="red_text_color">#FC733E</color>
+    <color name="blue_text_color">#24C6DC</color>
+    <color name="purple_text_color">#A041FF</color>
+    <color name="yellow_text_color">#FFA223</color>
+    <color name="bg_button_blue">#0983FE</color>
+    <color name="bg_button_gray">#F9F9F9</color>
+    <color name="bg_chat">#DFDBDB</color>
+    <color name="text_flick_username">#E6F9F9F9</color>
+    <color name="text_flick_caption">#D9F9F9F9</color>
+    <color name="bg_profile_black">#75111111</color>
+    <color name="bg_profile_black_dark">#DD070707</color>
+    <color name="dialog_gray_stroke">#707070</color>
+    <color name="dialog_gray_background">#333333</color>
+    <color name="bg_comments">#1B1C1E</color>
+    <color name="semi_trans_black">#82000000</color>
+    <color name="half_trans_black">#33000000</color>
+    <color name="semi_trans_white">#33FFFFFF</color>
+    <color name="purple_attachment_bg_color">#704F94</color>
+    <color name="semi_trans_parent">#00000000</color>
+    <color name="follow_personal_green">#29C68F</color>
+    <color name="follow_professional_blue">#24C6DC</color>
+    <color name="personal_info_input_bg_color">#F6F6F6</color>
+    <color name="discover_themes_color">#111111</color>
+    <color name="discover_channel_bg">#252525</color>
+    <color name="login_new">#9669F7</color>
+    <color name="login_new_blue">#78D8FB</color>
+    <color name="gray_fix_profile">#252525</color>
+    <color name="gray_aeaeae">#aeaeae</color>
+    <color name="gray_f6f6f6">#f6f6f6</color>
+    <color name="red_F94757">#F94757</color>
+    <color name="green_28C76F">#28C76F</color>
+    <color name="blue_2972C6">#2972C6</color>
+    <color name="yellow_FFA602">#FFA602</color>
+    <color name="fav_FB5C4C">#FB5C4C</color>
+    <color name="line_A0A0A0">#A0A0A0</color>
+    <color name="arrow_616161">#616161</color>
+    <color name="whiteTransparent">#30ffffff</color>
+    <color name="light_gray_background">#232323</color>
+    <color name="gray98_background">#272727</color>
+    <color name="gray60_background">#E4272727</color>
+    <color name="select_green">#11F878</color>
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="transparent">#00000000</color>
+
+    <!--    Rahul development-->
+    <color name="background_theme">#111111</color>
+    <color name="background_theme_light">#232323</color>
+    <color name="red">#F94757</color>
+    <color name="search_bar">#1d1d1f</color>
+    <color name="blue_text_color2">#2486DC</color>
+    <color name="blue_dark">#011B35</color>
+    <color name="login_mid">#B491FF</color>
+    <color name="green_txt_color">#09C988</color>
+    <color name="green_view_color">#8CCDB7</color>
+
+
+    <!--    Rahul Aadroid development-->
+    <color name="green1">#0CA672</color>
+    <color name="green">#09C988</color>
+    <color name="green_dark">#03A9A3</color>
+    <color name="gray">#191F27</color>
+    <color name="gray_private">#242A38</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/login_new</item>
+        <item>@color/login_new</item>
+        <item>@color/login_new</item>
+        <item>@color/login_new</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+        <item>@color/white</item>
+    </array>
+    <!--new color added-->
+    <color name="backgroundColorApp">#191F27</color>
+    <color name="backgroundColorBottomBar">#242A38</color>
+    <color name="iconTintColor">#03A9A3</color>
+
+
+
+
+<!--    Copy color-->
+
+      <color name="background_progress_color">#6C6D6D</color>
+    <color name="background_video_color">#2f3031</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="colorAccent">#3580FF</color>
+    <color name="colorBlackLt">#80000000</color>
+    <color name="colorDefaultBg">#f8f9fa</color>
+    <color name="colorGreyLt">#AD87868A</color>
+    <color name="colorHint">#707070</color>
+    <color name="colorPrimaryLt">#615C5585</color>
+    <color name="colorSkyTheme">#4A90E2</color>
+    <color name="colorTheme">#3580FF</color>
+    <color name="colorThemeRed">#F00606</color>
+    <color name="colorTrimmerPrimary">#6200EE</color>
+    <color name="colorTrimmerPrimaryDark">#000</color>
+    <color name="colorTxt">#212121</color>
+    <color name="colorWhiteLt">#80FFFFFF</color>
+    <color name="line_button">#565758</color>
+    <color name="line_color">#FF15FF00</color>
+    <color name="progress_color">#3F51B5</color>
+    <color name="shadow_color">#FF000000</color>
+
+
+</resources>

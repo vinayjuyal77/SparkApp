@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bio"
+            type="com.app.spark.activity.edit_bio.EditBioActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/theme_color"/>
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingStart="@dimen/_16sdp"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/viewHeader"
+            app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/_14ssp" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/key_to_good_attention"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:id="@+id/view"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintTop_toBottomOf="@id/tvHeader"
+            app:layout_constraintStart_toStartOf="@id/tvHeader"
+            android:background="@color/theme_color"
+            app:layout_constraintEnd_toEndOf="@id/tvHeader"/>
+
+        <TextView
+            android:id="@+id/tvYourBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:text="@string/your_bio"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/edtBio"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtBio"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+          app:layout_constraintWidth_percent="0.9"
+            android:background="@drawable/bg_edittext_black_border"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingTop="@dimen/_16sdp"
+            app:layout_constraintHeight_percent="0.6"
+            android:gravity="start"
+            app:layout_constraintVertical_bias="0"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:hint="@string/tell_me_about_yourself"
+            android:inputType="textMultiLine"
+            android:maxLines="12"
+            android:maxLength="400"
+            android:textColorHint="@color/gray_text_color"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnSave"
+            app:layout_constraintTop_toBottomOf="@+id/tvYourBio" />
+
+        <TextView
+            android:id="@+id/tvChar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="0/400"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/edtBio"
+            app:layout_constraintTop_toBottomOf="@id/edtBio" />
+
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:id="@+id/imgSparkk"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_app_logo"
+            app:layout_constraintEnd_toEndOf="@id/edtBio"
+            app:layout_constraintTop_toTopOf="@id/edtBio"
+            app:layout_constraintBottom_toTopOf="@id/edtBio"/>
+
+        <Button
+            android:onClick="@{(view) -> bio.updateBio()}"
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:layout_marginBottom="@dimen/_16sdp"
+            app:layout_constraintWidth_percent="0.4"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+           />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

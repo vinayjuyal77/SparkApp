@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgPost"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@color/gray_text_color"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tvViewLibrary"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:text="@string/view_library"
+            android:textColor="@color/white"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/bg_chat_attachment_semitrans"
+            app:layout_constraintBottom_toBottomOf="@id/imgPost"
+            app:layout_constraintEnd_toEndOf="@id/imgPost"
+            app:layout_constraintStart_toStartOf="@id/imgPost"
+            app:layout_constraintTop_toTopOf="@id/imgPost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

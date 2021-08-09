@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.app.spark.activity.setting.security.AuthenticationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_theme"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_back_black"
+                    android:layout_marginStart="20dp"
+                    app:tint="@color/white" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesansprobold"
+                    android:text="Posts and Flicks"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_aeaeae" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_white_storke"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Post"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Flick"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/gray_aeaeae" />
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Likes"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From People | Follow"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From Every One"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/gray_border"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Likes and Comments on vido you are tagged"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From People | Follow"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From Every One"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/gray_border"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Video Post"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From People | Follow"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From Every One"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/gray_border"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="Comments"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:inputType="text"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="Off"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From People | Follow"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:button="@null"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@android:drawable/radiobutton_off_background"
+                            android:text="From Every One"
+                            android:fontFamily="@font/sourcesansprosegular"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </RadioGroup>
+
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/gray_border"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

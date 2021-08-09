@@ -1,0 +1,63 @@
+<?xml version=  "1.0" encoding=  "utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="item"
+            type="com.app.spark.models.GetFlickResponse.Result" />
+
+        <import type="android.view.View" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width= "match_parent"
+    android:layout_height= "match_parent"
+    >
+
+    <!-- Template View for native ad -->
+    <com.google.android.ads.nativetemplates.TemplateView2
+        android:id="@+id/nativeTemplateView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:gnt_template_type2="@layout/gnt_medium_template_view_flick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+        <VideoView
+            android:id="@+id/pvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:use_controller="false">
+
+
+        </VideoView>
+
+
+
+
+    <ImageView
+        android:id="@+id/impost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

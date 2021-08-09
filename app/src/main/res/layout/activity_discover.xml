@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/llRootDiscover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/discover_themes_color">
+
+        <LinearLayout
+            android:id="@+id/parrentLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:elevation="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight=".10"
+                android:fontFamily="@font/constantia"
+                android:text="@string/back"
+                android:textColor="@color/light_gray_text_color"
+                android:textSize="@dimen/_16ssp" />
+
+            <TextView
+                android:id="@+id/tvDiscover"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".60"
+                android:fontFamily="@font/pristina_regular"
+                android:gravity="center_vertical|center"
+                android:text="@string/discover"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+            <ImageView
+                android:id="@+id/imgAddPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_2sdp"
+                android:src="@drawable/ic_add_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvBack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/parrentLL"
+            android:orientation="vertical">
+
+            <!--2nd Header-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_weight=".70"
+                    android:background="@drawable/bg_white_card"
+                    android:drawableStart="@drawable/ic_home_search"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:text="@string/search"
+                    android:textColor="@color/discover_themes_color"
+                    android:textSize="@dimen/_18ssp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_2sdp"
+                    android:src="@drawable/ic_icon_filter" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:paddingHorizontal="@dimen/_2sdp"
+                    android:src="@drawable/ic_icon_cart" />
+
+            </LinearLayout>
+
+            <!--Empty Layout-->
+            <LinearLayout
+                android:visibility="visible"
+                android:gravity="center|center_vertical"
+                android:orientation="vertical"
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvNamaste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:text="@string/start_discovering"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_22ssp" />
+                <TextView
+                    android:id="@+id/tvWeWelcomeYou"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:text="@string/setup_tags_to_discover_pages_content_and_products_that_are_meant_for_you"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp" />
+                <TextView
+                    android:id="@+id/tvFollowPeoplePages"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:background="@drawable/bg_white_card"
+                    android:text="Start"
+                    android:textColor="@color/discover_themes_color"
+                    android:textSize="@dimen/_22ssp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:listitem="@layout/item_discover_channels"
+                android:id="@+id/rvChannels"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bottomLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_vertical|center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/llConnectionType"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bg_white_card"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:background="@drawable/selectable_button_discover"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="@string/post"
+                    android:textColor="@color/theme_color" />
+
+                <TextView
+                    android:id="@+id/tvFlick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:background="@drawable/selectable_button_discover"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:text="@string/flicks"
+                    android:textColor="@color/theme_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_new">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoplayerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:resize_mode="fill"
+        android:visibility="gone"
+        app:rewind_increment="5000"
+        app:fastforward_increment="5000"
+        app:controller_layout_id="@layout/exo_player_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </com.google.android.exoplayer2.ui.PlayerView>
+    <ImageView
+        android:id="@+id/ivPriviewVideo"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@color/whiteTransparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

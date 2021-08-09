@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="model"
+            type="com.app.spark.models.TagListModel"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/round_select_gray"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_8sdp">
+        <TextView
+            android:id="@+id/tvTagName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@={model.tagName}"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp" />
+        <!-- -->
+        <ImageView
+            android:id="@+id/imgCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:src="@drawable/ic_tag_cancel_white"
+            app:tint="@color/white"
+            android:visibility="gone"
+            android:gravity="center|center_vertical" />
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_translucent">
+        <com.otaliastudios.cameraview.CameraView
+            android:id="@+id/camera"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:keepScreenOn="true"
+            app:cameraExperimental="true"
+            app:cameraEngine="camera2"
+            app:cameraPreview="glSurface"
+            app:cameraPlaySounds="true"
+            app:cameraGrid="off"
+            app:cameraFlash="auto"
+            app:cameraAudio="on"
+            app:cameraFacing="back"
+            app:cameraGestureTap="none"
+            app:cameraGestureLongTap="none"
+            app:cameraGesturePinch="zoom"
+            app:cameraGestureScrollHorizontal="filterControl1"
+            app:cameraGestureScrollVertical="exposureCorrection"
+            app:cameraMode="picture"
+            app:cameraAutoFocusMarker="@string/cameraview_default_autofocus_marker">
+        </com.otaliastudios.cameraview.CameraView>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <LinearLayout
+            android:id="@+id/controlPanel"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ovel_shape"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:id="@+id/btnFlash"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:background="@null"
+                android:padding="7dp"
+                android:src="@drawable/ic_flash_off"/>
+
+            <TextView
+                android:id="@+id/tvZoom"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="1X"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <!-- <ImageButton
+                 android:id="@+id/btnTakePicture"
+                 android:layout_width="50dp"
+                 android:layout_height="50dp"
+                 android:layout_marginTop="18dp"
+                 android:background="@drawable/round_shape"
+                 android:src="@drawable/ic_capture"
+                 tools:ignore="ContentDescription" />-->
+            <RelativeLayout
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="18dp">
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/progressbar_curve"
+                    android:background="@drawable/circle_shape"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/_2sdp"/>
+                <ImageButton
+                    android:id="@+id/btnTakePicture"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:src="@drawable/ic_capture" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btnSwitchCamera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@null"
+                android:src="@drawable/ic_camera_switch" />
+
+            <ImageButton
+                android:id="@+id/btnGrid"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="18dp"
+                android:background="@android:color/transparent"
+                android:elevation="1dp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_grid_off"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

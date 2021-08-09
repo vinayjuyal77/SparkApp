@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@drawable/bg_discover_channel"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/tvTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
+        android:fontFamily="@font/sourcesansprobold"
+        android:text="Celebrity"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:gravity="center"
+       />
+</LinearLayout>
+</layout>

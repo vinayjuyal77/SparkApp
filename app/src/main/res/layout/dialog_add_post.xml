@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bg_curve">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/bg_dialog_gray_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/tvLetsCreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprobold"
+            android:gravity="center"
+            android:text="@string/lets_create"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <View
+            android:id="@+id/viewRoom"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvLetsCreate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvCreateRoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_room_icon"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/create_room"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewRoom" />
+
+        <View
+            android:id="@+id/viewStory"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreateRoom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvStory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_icon_story_green"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Add Story"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewStory" />
+        <View
+            android:id="@+id/viewFlick"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvStory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvFlick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_top_line_gray"
+            android:drawableStart="@drawable/ic_add_post_flick"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Create Flick"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFlick" />
+
+        <View
+            android:id="@+id/viewPost"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvFlick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_post_icon"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Add Post"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewPost" />
+
+        <View
+            android:id="@+id/viewAudio"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvPost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvAudio"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_top_line_gray"
+            android:drawableStart="@drawable/ic_add_post_music"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/audio"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewAudio" />
+        <View
+            android:id="@+id/viewWriteSomething"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvAudio"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvWriteSomething"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_top_line_gray"
+            android:drawableStart="@drawable/ic_icon_write_something"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/write_something"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewWriteSomething" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/green_view_color"
+            app:layout_constraintTop_toBottomOf="@+id/tvWriteSomething"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/tvVideoEditor"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_top_line_gray"
+            android:drawableStart="@drawable/ic_icon_video_editing"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="Video Editor"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <TextView
+            android:id="@+id/tvGuideBook"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_top_line_gray"
+            android:drawableStart="@drawable/ic_guide_book"
+            android:drawablePadding="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/guide_book"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWriteSomething" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

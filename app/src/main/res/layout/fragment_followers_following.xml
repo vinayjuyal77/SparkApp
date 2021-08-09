@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="following"
+            type="com.app.spark.activity.followers.ActivityFollowerFollowing" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorApp">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:onClick="@{(view) -> following.onBackPressed()}"
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:src="@drawable/ic_back_black"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view" />
+
+        <TextView
+            android:id="@+id/tvGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:text="mr_m"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="@id/view"
+            app:layout_constraintStart_toEndOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="@id/view" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            app:layout_constraintTop_toBottomOf="@id/view"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="@dimen/_1sdp"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/PostGalleryTextAppearance"
+            app:tabTextColor="@color/white">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/followers" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/following" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <TextView
+            android:id="@+id/tvNamaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/namaste"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_22ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+        <TextView
+            android:id="@+id/tvWeWelcomeYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center"
+            android:text="@string/its_great_to_have_you"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNamaste" />
+
+        <TextView
+            android:id="@+id/tvFollowPeoplePages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/sourcesansprolight"
+            android:gravity="center"
+            android:text="@string/currently_no_followers"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWeWelcomeYou"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/recycleViewFollowing"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/llConnectionType"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_follow_following" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpViewPagger"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@+id/llConnectionType"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+
+        <LinearLayout
+            android:id="@+id/llConnectionType"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/white_button_line"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.7">
+
+            <TextView
+                android:onClick="@{(view) -> following.onConnectionTypeSelection(1)}"
+                android:id="@+id/tvPersonal"
+                android:layout_margin="@dimen/_1sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_follow_connection_type"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:text="@string/personal"
+                android:textColor="@color/selector_chat_personal" />
+
+            <TextView
+                android:onClick="@{(view) -> following.onConnectionTypeSelection(2)}"
+                android:id="@+id/tvProfessional"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/_1sdp"
+                android:background="@drawable/selector_follow_connection_type"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:text="@string/professional"
+                android:textColor="@color/selector_chat_professional" />
+
+            <TextView
+                android:onClick="@{(view) -> following.onConnectionTypeSelection(3)}"
+                android:id="@+id/tvPublic"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_follow_connection_type"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:text="@string/public_name"
+                android:textColor="@color/selector_chat_public" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvFollowPeoplePages,tvNamaste,tvWeWelcomeYou" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

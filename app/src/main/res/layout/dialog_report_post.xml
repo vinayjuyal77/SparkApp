@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="dialog"
+            type="com.app.spark.dialogs.ReportPostDialog" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_card"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:text="@string/report"
+                android:textColor="@color/black_new"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:text="@string/do_you_want_report_this_post"
+                android:textColor="@color/black_new"
+                android:textSize="@dimen/_14ssp" />
+
+            <CheckBox
+                android:id="@+id/tvUnfollow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="end"
+                android:checked="true"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/block_and_unfollow_this_account"
+                android:textColor="@color/black_new"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:minWidth="@dimen/_80sdp"
+                    android:onClick="@{(view) -> dialog.dialogCancel()}"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black_new"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tvReport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:background="@drawable/ic_bg_button_green"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:gravity="center"
+                    android:minWidth="@dimen/_80sdp"
+                    android:onClick="@{(view) -> dialog.dialogSubmit()}"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/report"
+                    android:textAllCaps="true"
+                    android:textColor="@color/selector_follow_followed"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

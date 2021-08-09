@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColorApp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bg_top_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bg_bottom_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:text="@string/welcome_there"
+            android:textColor="@color/green_text_color"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.1449"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/to_the_real_social_media"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+        <ImageView
+            android:id="@+id/imgApplogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_app_logo"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeaderMsg"
+            android:layout_marginTop="@dimen/_20sdp" />
+        <LinearLayout
+            android:id="@+id/llUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:background="@drawable/white_button_line"
+            android:elevation="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/etPhoneNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgApplogo"
+            app:layout_constraintVertical_bias="0.211"
+            app:layout_constraintVertical_chainStyle="packed">
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:hint="@string/username"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:digits="@string/username_only"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:textColorHint="@color/gray_text_color"/>
+            <ImageView
+                android:id="@+id/imgUserNameVerify"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:src="@drawable/ic_verify_check_login"
+                android:visibility="gone" />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/etPhoneNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:background="@drawable/white_button_line"
+            android:drawableStart="@drawable/ic_call"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="@string/phone_number"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textColorHint="@color/gray_text_color"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/llUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/llPassword"/>
+        <LinearLayout
+            android:id="@+id/llPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/white_button_line"
+            android:elevation="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/llConfirmPassword"
+            >
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_lock"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:drawablePadding="@dimen/_5sdp"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray_text_color"
+                android:textSize="@dimen/_14ssp"
+                app:drawableTint="@color/iconTintColor" />
+            <ImageView
+                android:id="@+id/imgEyeLoginpassword"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_close_eye"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/white_button_line"
+            android:elevation="@dimen/_2sdp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/llPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+            >
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="@dimen/_5sdp"
+                android:hint="@string/confirm_password"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/gray_text_color"
+                android:textSize="@dimen/_14ssp" />
+            <ImageView
+                android:id="@+id/imgEyeConfirmPassword"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_close_eye"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/ic_bg_button_green_big"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center"
+            android:text="@string/signup"
+            android:textAllCaps="false"
+            android:textColor="@color/black_new"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toTopOf="@+id/llSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llConfirmPassword" />
+        <LinearLayout
+            android:id="@+id/llSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAlreadyMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/already_member"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@id/txtHeader"
+                app:layout_constraintStart_toStartOf="@id/txtHeader"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:textColor="@color/green_text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@id/txtHeader"
+                app:layout_constraintStart_toStartOf="@id/txtHeader"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_login_circle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_25sdp"
+            android:src="@drawable/ic_login_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgIdea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/ic_group_signup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeaderMsg" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_idea_login"
+            app:layout_constraintBottom_toTopOf="@+id/llForgotPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <Space
+            android:id="@+id/space"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="@id/btnLogin"
+            app:layout_constraintEnd_toEndOf="@id/btnLogin"
+            app:layout_constraintStart_toStartOf="@id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_path_signup"
+
+            app:layout_constraintEnd_toEndOf="@+id/btnLogin"
+            app:layout_constraintStart_toStartOf="@+id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:text="@string/welcome_there"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_24ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtHeaderMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/to_the_real_social_media"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="@id/txtHeader"
+            app:layout_constraintStart_toStartOf="@id/txtHeader"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_app_logo"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/ic_path_signup" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:text="@string/best_decision_of_your_life"
+                    android:textColor="@color/theme_color"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+
+                android:background="@drawable/bg_edittext_login_new"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:digits="@string/username_only"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:fontFamily="@font/sourcesansprosegular"
+                    android:hint="@string/username"
+                    android:maxLength="32"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="@dimen/_14ssp"
+                    app:drawableTint="@color/login_new" />
+
+                <ImageView
+                    android:id="@+id/imgUserNameVerify"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_verify_check_login"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edittext_login_new"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="@dimen/_5sdp"
+                android:elevation="@dimen/_2sdp"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_14ssp"
+                app:drawableTint="@color/login_new" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edittext_login_new"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:hint="@string/password"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_14ssp"
+                    app:drawableTint="@color/login_new" />
+
+                <ImageView
+                    android:id="@+id/imgEyeLoginpassword"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/ic_close_eye"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edittext_login_new"
+                android:elevation="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etConfirmPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:hint="@string/confirm_password"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_14ssp"
+                    app:drawableTint="@color/login_new" />
+
+                <ImageView
+                    android:id="@+id/imgEyeConfirmPassword"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/ic_close_eye"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/bg_button_login_new"
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center"
+            android:text="@string/signup"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toTopOf="@+id/llForgotPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llLogin"
+            app:layout_constraintVertical_bias="0.35"
+            app:layout_constraintWidth_percent="0.45" />
+
+        <LinearLayout
+            android:id="@+id/llForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAlreadyMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/already_member"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="@id/txtHeader"
+                app:layout_constraintStart_toStartOf="@id/txtHeader"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:text="@string/login"
+                android:textAllCaps="true"
+                android:textColor="@color/purple_text_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="@id/txtHeader"
+                app:layout_constraintStart_toStartOf="@id/txtHeader"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</layout>

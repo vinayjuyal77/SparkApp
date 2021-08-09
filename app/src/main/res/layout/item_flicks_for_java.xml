@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+       >
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/pvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+
+            app:use_controller="false" >
+
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/llbb"
+            />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@{item.username}"
+            android:textColor="@color/text_flick_username"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toEndOf="@id/imgProfilePic"
+            app:layout_constraintTop_toTopOf="@id/imgProfilePic" />
+
+        <View
+            android:id="@+id/viewDot"
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="@id/tvUserName"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+            app:layout_constraintStart_toEndOf="@id/tvUserName"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:background="@drawable/bg_circle_white"/>
+
+        <TextView
+            android:id="@+id/tvFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/follow"
+            android:textColor="@color/text_flick_username"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+            app:layout_constraintStart_toEndOf="@id/viewDot"
+            app:layout_constraintTop_toTopOf="@id/tvUserName" />
+
+
+        <LinearLayout
+            android:id="@+id/llbb"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/llLikeComment"
+            app:layout_constraintBottom_toBottomOf="@id/llLikeComment"
+            app:layout_constraintStart_toStartOf="@id/tvUserName">
+
+            <LinearLayout
+                android:id="@+id/llMore"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:maxLength="70"
+                    android:maxLines="2"
+                    android:id="@+id/tvCaption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:text="@{item.flickInfo}"
+                    android:textColor="@color/text_flick_username"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tvCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:text="@{item.flickInfo}"
+                android:textColor="@color/text_flick_username"
+                android:textSize="@dimen/_13ssp" />
+            <TextView
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="end"
+                android:id="@+id/tvReadMOre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:maxLength="70"
+                android:maxLines="3"
+                android:text="@string/read_more"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/_10ssp"
+                android:visibility="gone" />
+        </LinearLayout>
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/llLikeComment"
+            app:layout_constraintBottom_toBottomOf="@id/llLikeComment"
+            app:layout_constraintStart_toStartOf="@id/tvUserName"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@{item.flickInfo}"
+            android:textColor="@color/text_flick_caption"
+            android:textSize="@dimen/_13ssp"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/llLikeComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_feed_like_bg"
+            android:gravity="center"
+            android:minWidth="@dimen/_40sdp"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:drawableTopCompat="@drawable/ic_flick_eye" />
+
+            <TextView
+                android:id="@+id/tvLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                app:drawableTopCompat="@drawable/selector_favourite" />
+            <TextView
+                android:id="@+id/tvComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:text="@{item.commentCount}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp"
+                app:drawableTopCompat="@drawable/ic_flick_comments" />
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_flick_share"
+                android:layout_marginTop="@dimen/_5sdp"
+                />
+
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:rotation="90"
+                android:src="@drawable/ic_flick_three_dots"
+                />
+        </LinearLayout>
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imagegif"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/heart"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

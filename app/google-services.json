@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "593957331728",
+    "project_id": "sparkk-ac563",
+    "storage_bucket": "sparkk-ac563.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593957331728:android:80227b41d8aed610e2fb95",
+        "android_client_info": {
+          "package_name": "com.app.spark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593957331728-j5jbmmqic5lru0k12hm5t04difn538bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.spark",
+            "certificate_hash": "c366977d79c6fa65235c44b209e737aa93b0538b"
+          }
+        },
+        {
+          "client_id": "593957331728-jrj5ii66si2upo7fcsmp726ck1oek2a1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.spark",
+            "certificate_hash": "c03a6e8a84c4170ae67d09d99bfed29b16f8a134"
+          }
+        },
+        {
+          "client_id": "593957331728-d2u33cp9rmmd3523i6sumnn7n9l26ts0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl1HQGhpii50DMWVinWpWfSKCfvMLnxV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593957331728-d2u33cp9rmmd3523i6sumnn7n9l26ts0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

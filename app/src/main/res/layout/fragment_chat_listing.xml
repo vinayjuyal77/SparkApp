@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llChatText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8">
+
+            <TextView
+                android:id="@+id/tvText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/hey"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_22ssp" />
+
+            <TextView
+                android:id="@+id/tvText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:gravity="center"
+                android:text="@string/life_meant_for_friends_family"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_18ssp" />
+
+            <TextView
+                android:id="@+id/tvText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/sourcesansprolight"
+                android:gravity="center"
+                android:text="@string/chat_personal_note"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/tvNoChats"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@drawable/bg_button_light_gray"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:gravity="center"
+            android:text="@string/no_chats"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.4" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fabGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:elevation="@dimen/_2sdp"
+            android:src="@drawable/ic_chat_add_group"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+
+                <include layout="@layout/item_coversation_list_shimmer" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

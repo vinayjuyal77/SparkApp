@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:background="@drawable/bg_white_card"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical"
+        android:elevation="@dimen/_4sdp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/allow_sparkk_to_access_this_device_s_location"
+            />
+
+        <TextView
+            android:id="@+id/tvAllow"
+            android:layout_width="@dimen/_80sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/allow"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:gravity="center"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:paddingVertical="@dimen/_8sdp"
+            android:background="@drawable/bg_edittext_with_shadow"
+            />
+        <TextView
+            android:id="@+id/tvDecline"
+            android:layout_width="@dimen/_80sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/decline"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textColor="@color/theme_color"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:background="@drawable/bg_edittext_with_shadow"
+            />
+    </LinearLayout>
+</LinearLayout>

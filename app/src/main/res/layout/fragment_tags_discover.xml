@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@drawable/bg_discover_search"
+        android:drawableStart="@drawable/ic_home_search"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="@font/sourcesansprosegular"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:drawableTint="@color/white"
+        android:text="@string/search"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/rvTagsCategory"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="vertical"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_tags_discover"
+        app:spanCount="2"
+        app:layout_constraintTop_toBottomOf="@id/edtSearch"
+        android:layout_marginTop="@dimen/_10sdp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

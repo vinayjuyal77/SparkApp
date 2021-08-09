@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/_16sdp"
+        android:layout_margin="@dimen/_25sdp"
+        android:background="@drawable/bg_white_card"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:text="@string/do_you_want_delete_this_message"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:textSize="@dimen/_12ssp"
+                android:textAllCaps="true"
+                android:textColor="@color/dark_gray_text_color"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/bg_chat_cancel"
+                />
+            <TextView
+                android:id="@+id/tvDelete"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_12ssp"
+
+                android:fontFamily="@font/sourcesansprosegular"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/bg_chat_delete_green"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

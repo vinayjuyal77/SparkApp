@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.SparkRuleActivity">
+
+        <LinearLayout
+            android:id="@+id/llHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_32sdp">
+
+            <TextView
+                android:id="@+id/tvImportantInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprobold"
+                android:text="@string/sparkk_house_rules"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_22ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:src="@drawable/ic_app_logo" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/llHead"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprobold"
+                android:text="Be yourself"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/make_sure_your_photos_age_and_bio_are_true_to_who_you_are"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_13ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprobold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/play_it_cool"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/respect_others_and_treat_them_as_you_would_like_to_be_treated"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprobold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/stay_safe"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/dont_be"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprobold"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/be_proactive"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_16ssp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/sourcesansprosegular"
+                android:text="@string/always_report_bad_behavior"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_13ssp" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:background="@drawable/bg_button"
+            android:text="@string/i_accept"
+            android:fontFamily="@font/sourcesansprosegular"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="@dimen/_40sdp"
+            android:textAllCaps="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
+            android:textSize="@dimen/_16ssp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_32sdp"
+            />
+    </RelativeLayout>
+</ScrollView>

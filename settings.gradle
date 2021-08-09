@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        gradlePluginPortal()
+    }
+}
+include ':app',':nativetemplatess', ':cameraview', ':video_trimmer_library'
+rootProject.name = "SparkApp"
+

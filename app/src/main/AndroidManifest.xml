@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.spark">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".activity.AGApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:extractNativeLibs="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SparkApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".create_page.PageViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".create_page.CreateAPgae"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.groupcall.AddUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.groupcall.GroupCallUserListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.groupcall.RoomActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.UsersProfileActivity" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5067799942394351~1279287185" />
+
+<!--        android:value="ca-app-pub-3940256099942544~3347511713" />-->
+        <!-- Vinay Activities -->
+        <activity
+            android:name=".activity.camera.VideoPreviewActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.story.screen.StoryMainActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+
+
+
+
+
+        <activity
+            android:name=".activity.camera.PicturePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.camera.CameraCustom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.custom_gallery.EditorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.custom_gallery.CustomGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.camera.CameraXActivity" />
+        <activity android:name=".activity.camera.CameraActivity" />
+        <activity android:name=".activity.counsellor.CallToCounsellorActivity" />
+        <activity android:name=".activity.counsellor.CounsellorInformationActivity" />
+        <activity android:name=".activity.counsellor.ConnectCounsellorActivity" />
+        <activity android:name=".activity.explore.SessionOverActivity" />
+        <activity android:name=".activity.explore.FriendChatActivity" />
+        <activity android:name=".activity.explore.MatchFoundActivity" />
+        <activity
+            android:name=".activity.explore.FindMeFriendActivity"
+            android:screenOrientation="portrait" /> <!-- Rahul Activities -->
+        <activity android:name=".activity.setting.notification.EmailAndSMSActivity" />
+        <activity android:name=".activity.setting.notification.FollowingandFollowers" />
+        <activity android:name=".activity.setting.notification.LikeandCommentActivity" />
+        <activity android:name=".activity.setting.notification.MessageActivity" />
+        <activity android:name=".activity.setting.notification.PostAndFlickActivity" />
+        <activity android:name=".activity.setting.security.UsernameChangesActivity" />
+        <activity android:name=".activity.setting.security.PasswordChangedInfo" />
+        <activity android:name=".activity.setting.security.EmailconnectdActivity" />
+        <activity android:name=".activity.setting.security.RecoveryActivity" />
+        <activity android:name=".activity.setting.security.AdditionalMethodActivity" />
+        <activity android:name=".activity.setting.security.TextMessageActivity" />
+        <activity android:name=".activity.setting.security.AuthenticationAppActivity" />
+        <activity android:name=".activity.setting.security.AuthenticationActivity" />
+        <activity android:name=".activity.setting.security.LoginInfoActivity" />
+        <activity android:name=".activity.setting.security.ChangePasswordActivity" />
+        <activity android:name=".activity.setting.privacy.DeleteAccountPassword" />
+        <activity android:name=".activity.setting.privacy.TransferAccountActivity" />
+        <activity android:name=".activity.setting.privacy.BlockedActivity" />
+        <activity android:name=".activity.setting.account.SeeActivity" />
+        <activity android:name=".activity.setting.account.PurchasePaymentMethod" />
+        <activity android:name=".activity.setting.account.DeletedPostActivity" />
+        <activity android:name=".activity.setting.account.SavedFlickPostActivity" />
+        <activity android:name=".activity.setting.account.UpdateMobileNumber" />
+        <activity android:name=".activity.setting.account.ChangeUsernameActivity" />
+        <activity android:name=".activity.setting.buyservice.BuyServiceActivity" />
+        <activity android:name=".activity.setting.help.HelpActivity" />
+        <activity android:name=".activity.setting.purchase.PurchaseActivity" />
+        <activity android:name=".activity.setting.security.SecurityActivity" />
+        <activity android:name=".activity.setting.notification.NotificationActivity" />
+        <activity android:name=".activity.setting.privacy.PrivacyActivity" />
+        <activity android:name=".activity.setting.account.YourAccountActivity" />
+        <activity android:name=".activity.setting.SettingActivity" />
+        <activity android:name=".activity.welcome_screen.WelcomeActivity" />
+        <activity android:name=".activity.flick_gallery.TrimmerActivity" />
+        <activity
+            android:name=".activity.ChangeEmailMobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SparkRuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UploadProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path_provider" />
+        </provider>
+
+        <activity
+            android:name=".activity.LetSparkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.chatroom.ChatRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.play_information.ActivityPlayInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.followers.ActivityFollowerFollowing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.personal_info.ActivityPersonalInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.professional_info.ActivityProfessionalInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ImportantDataActivity"
+            android:screenOrientation="portrait" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginSignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SparkApp"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.connectd.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.edit_bio.EditBioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.gallery.GalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.add_post.AddPostActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <activity
+            android:name=".activity.music_gallery.MusicGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.flick_gallery.FlickGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.post_comments.PostCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WhiteTheme" />
+        <activity
+            android:name=".activity.flick_gallery.AddFlickActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.create_chat_group.AddChatMembersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.create_chat_group.CreateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.group_chat_room.GroupChatRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PlayVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ShowImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgotPasswordOtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.change_password.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.user_feeds.FeedListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.user_flicks.FlickListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.chat_profile.ChatProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.FixYourProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.NewLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.NewSignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".image_cropper.CropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image_cropper.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image_cropper.PickedImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" /> <!-- Google Meta NotificationData for maps -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service
+            android:name=".activity.reciver.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name=".utils.FirebaseNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+
+
+
+
+        <activity android:name=".fragment.groupcall.agora.AgoraCallingActivity"
+            android:parentActivityName=".fragment.groupcall.agora.AgoraMainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask">
+
+        </activity>
+        <activity android:name=".fragment.groupcall.agora.AgoraMainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".activity.reciver.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name=".activity.reciver.AgoraReciverService"
+            android:exported="false" />
+        <service
+            android:name=".utils.FirebaseNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+    </application>
+
+</manifest>
